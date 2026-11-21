@@ -1,0 +1,29 @@
+{
+  "name": "sap-cap-procurement-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SAP CAP procurement prototype with Fiori Elements and OData V4",
+  "scripts": {
+    "start": "cds serve",
+    "dev": "cds watch",
+    "deploy:sqlite": "cds deploy --to sqlite:db.sqlite",
+    "check": "cds compile srv app --to json > /dev/null"
+  },
+  "dependencies": {
+    "@sap/cds": "^9.0.0",
+    "@cap-js/sqlite": "^2.0.0"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^9.0.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
+    }
+  }
+}
